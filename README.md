@@ -156,7 +156,7 @@ This project's basic usage is as follows:
 2. Modify the `repos.json` file through the Github website or pull it to your local machine and commit the changes.
 
 3. Go to the `Action` page on Github and find `Build kernels`, then `Run workflow`.
-
+actions/upload-artifact@v4
 4. Wait for the compilation to finish, then download the compiled product from the corresponding page.
 
 5. Use your preferred packaging software to package the kernel ([AnyKernel3](https://github.com/osm0sis/AnyKernel3), [Android-Image-Kitchen](https://github.com/osm0sis/Android-Image-Kitchen), [MagiskBoot](https://github.com/topjohnwu/Magisk/releases), etc.)
@@ -164,7 +164,7 @@ This project's basic usage is as follows:
 ![Artifacts](./.assets/artifacts.png)
 
 # Local testing
-
+actions/upload-artifact@v4
 If you don't want to run the action on `Github`, you can use [nektos/act](https://github.com/nektos/act) to test this workflow locally and output the files.
 
 ## Normal local build (kernel source code is fetched using Git)
@@ -172,7 +172,7 @@ If you don't want to run the action on `Github`, you can use [nektos/act](https:
 This is the recommended local testing process. Simply install [nektos/act](https://github.com/nektos/act) and run the following command:
 
 ```sh
-# Collect artifacts to /tmp/artifacts folder:
+# Collect artifacts to /tmp/artifacts folder:actions/upload-artifact@v4
 act --artifact-server-path /tmp/artifacts
 ```
 
@@ -180,7 +180,7 @@ If you want to store the artifacts in a different location, change `/tmp/artifac
 
 If there are errors, use the `-v` flag to generate an error report and submit an issue. Here's the command:
 
-```sh
+actions/upload-artifact@v4
 # Collect artifacts to /tmp/artifacts folder:
 act --artifact-server-path /tmp/artifacts -v
 ```
